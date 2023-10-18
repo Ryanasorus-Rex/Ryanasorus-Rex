@@ -1,0 +1,16 @@
+# Remember to do the following below
+# pip install google
+# pip install google-search
+# pip install beautifulsoup4
+# If you don't do those, the code won't work.
+
+try:
+	from googlesearch import search
+except ImportError:
+	print("No module named 'google' found")
+
+# to search
+query = "python"
+
+for i in search(query, tld="co.in", num=10, stop=10, pause=2):
+	print(i)
